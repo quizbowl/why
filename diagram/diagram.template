@@ -1,0 +1,22 @@
+\documentclass{article}
+
+\usepackage{fontspec}
+\setmainfont[Ligatures=TeX]{Lyon Text}
+
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\usetikzlibrary{graphs, quotes} % Requires pgf 3: sudo tlmgr update pgf
+\usetikzlibrary{graphdrawing}   % Requires luatex
+\usegdlibrary{layered}          % Requires luatex
+
+% To save footnotes used inside a tikzpicture
+\usepackage{footnote}
+\usepackage{hyperref}
+\usepackage[margin=1.5in]{geometry}
+% \usepackage{showframe}
+
+\begin{document}
+
+$body$
+
+\end{document}
