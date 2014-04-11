@@ -1,7 +1,9 @@
 \documentclass{article}
 
 \usepackage{fontspec}
-\setmainfont[Ligatures=TeX]{Lyon Text}
+\setmainfont[Ligatures=TeX
+, BoldFont=Lyon Text Semibold
+]{Lyon Text}
 
 \usepackage{tikz}
 \usetikzlibrary{arrows}
@@ -9,13 +11,11 @@
 \usetikzlibrary{graphdrawing}   % Requires luatex
 \usegdlibrary{layered}          % Requires luatex
 
-% To save footnotes used inside a tikzpicture
-\usepackage{footnote}
 \usepackage{hyperref}
-\usepackage[margin=1.5in]{geometry}
-% \usepackage{showframe}
 
 \begin{document}
+\title{$title$}
+\maketitle
 
 $body$
 
