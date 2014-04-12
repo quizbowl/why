@@ -1,49 +1,48 @@
-\newcommand\myfootnote[1]{\footnote{\hspace{2mm}#1}}
-\newcommand\hsqborg{\textsc{hsqb}.org}
+\newcommand\myref[1]{\ref{#1}. \textbf{\nameref{#1}}}
 
 \begin{tikzpicture}[>=latex']
 \tikzset{
-	component/.style={font=\bfseries},
-	exchange/.style={},
-	packetsub/.style={gray!40}
+	component/.style={},
+	relationship/.style={},
+	packetsub/.style={gray!50}
 }
 
 \graph[
   layered layout,
-  level distance=3.3em,
-  sibling sep=2em,
+  level distance=4em,
+  sibling sep=1.75em,
   component align=center,
   nodes={text depth=2pt}
 ] {
 	% Main components
 	{ [nodes={component}]
-		sub   / Packet submission manager [packetsub],
-		tdir  / Tournament director,
-		twri  / Tournament writer \myfootnote{\textsc{qems}, Ginseng, Google Docs},
-		read  / Reader,
-		sk    / Match scorekeeper \myfootnote{\textsc{sqbs}, \textsc{qbsql}, Taft, Excel, pen-and-paper},
-		stats / Statistics viewer \myfootnote{\hsqborg's \textsc{sqbs} hosting, \textsc{naqt}'s stats database},
-		tdb   / Tournament database \myfootnote{\hsqborg's tournament database},
-		qdb   / Question repository \myfootnote{\hsqborg's packet archive (unparsed); \href{https://github.com/neotenic/packets}{few others} (parsed)},
-		srch  / Search engines \myfootnote{\textsc{acfdb}, Gyaankosh, \textsc{qbdb}},
-		prac  / Practice tools \myfootnote{Protobowl, TriviaBot},
+		sub   / \myref{sub} [packetsub],
+		tdir  / \myref{tdir},
+		twri  / \myref{twri},
+		read  / \myref{read},
+		sk    / \myref{sk},
+		stats / \myref{stats},
+		tdb   / \myref{tdb},
+		qdb   / \myref{qdb},
+		srch  / \myref{srch},
+		prac  / \myref{prac},
 	},
 
 	% Relationships
-	{ [nodes={exchange}] %[nodes={draw, minimum width=10em}]
-		tdir  -- provides schedule and player names to    -> read,
-		twri  -- provides final packets to                -> { read, qdb },
-		read  -- records score and buzz locations for     -> sk,
-		sk    -- sends match stats for assembly by        -> stats,
-		stats -- provides link to stats for               -> tdb,
-		qdb   -- provides many questions to               -> { srch, prac }
+	{ [nodes={relationship}] %[nodes={draw, minimum width=10em}]
+		tdir  -- "provides schedules, team info to"   -> read,
+		twri  -- provides final packets to            -> { read, qdb },
+		read  -- records score and buzzes for         -> sk,
+		sk    -- sends stats for assembly by          -> stats,
+		stats -- provides link to stats for           -> tdb,
+		qdb   -- provides many questions to           -> { srch, prac }
 	},
 
 	% Labeled sublayout
 	% "(Only for packet submission tournaments)" [packetsub]
 	// { [nodes={packetsub}, edges={packetsub}]
-		sub   -- b / generates schedule with byes for,
-		sub   -- a / sends submissions for editing to,
+		sub   -- b / makes schedule with byes for,
+		sub   -- a / sends packets for editing to,
 	},
 	{ [edges={packetsub}]
 		b -> tdir,
