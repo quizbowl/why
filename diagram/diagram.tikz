@@ -9,6 +9,7 @@
 
 \graph[
   layered layout,
+  tail anchor=south,
   level distance=4em,
   sibling sep=1.75em,
   component align=center,
