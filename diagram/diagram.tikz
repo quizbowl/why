@@ -1,10 +1,11 @@
 \newcommand\myref[1]{\ref{#1}. \textbf{\nameref{#1}}}
 
-\begin{tikzpicture}[>=latex']
+\begin{tikzpicture}
 \tikzset{
+	>=latex',
 	component/.style={},
 	relationship/.style={},
-	packetsub/.style={gray!50}
+	packetsub/.style={gray!50},
 }
 
 \graph[
@@ -13,7 +14,8 @@
   level distance=4em,
   sibling sep=1.75em,
   component align=center,
-  nodes={text depth=2pt}
+  nodes={text depth=2pt},
+  edges={semithick},
 ] {
 	% Main components
 	{ [nodes={component}]
