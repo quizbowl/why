@@ -113,8 +113,11 @@ Description of what a “question repository” is.
 Description of what a “search engine” is.
 
 ## Existing
+### Closed-source service
 #### \textsc{acfdb}
 #### Gyaankosh
+
+### Open-ish-source service
 #### \textsc{qbdb}
 
 
@@ -122,6 +125,7 @@ Description of what a “search engine” is.
 Description of what a “practice tool” is.
 
 ## Existing
+### Open-source niche software
 #### Protobowl
 #### TriviaBot
 
@@ -129,7 +133,7 @@ Description of what a “practice tool” is.
 \appendix
 
 # Potential components
-This appendix lists components that, while out of the scope of the components included in a hypothetical complete quizbowl software suite, still interface with the same data used by the suite.
+This appendix lists components that, while out of the scope of a hypothetical quizbowl software suite, still interface with the same data used by the suite.
 
 ## Smart buzzer system
 Description of what a “smart buzzer system” is.
