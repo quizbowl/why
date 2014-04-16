@@ -1,5 +1,6 @@
 ---
 title: Components of a quizbowl software suite
+author: Ophir Lifshitz
 ---
 
 \newcommand\HSQBorg{\textsc{hsqb}.org}

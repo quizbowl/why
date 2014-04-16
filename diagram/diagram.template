@@ -15,6 +15,7 @@
 
 \begin{document}
 \title{$title$}
+\author{$author$}
 \maketitle
 
 $body$
