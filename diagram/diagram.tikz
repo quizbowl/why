@@ -3,7 +3,7 @@
 \begin{tikzpicture}
 \tikzset{
 	>=latex',
-	component/.style={},
+	component/.style={graphs/typeset={\myref{\tikzgraphnodefullname}}},
 	relationship/.style={},
 	packetsub/.style={gray!50},
 }
@@ -19,16 +19,16 @@
 ] {
 	% Main components
 	{ [nodes={component}]
-		sub   / \myref{sub} [packetsub],
-		tdir  / \myref{tdir},
-		twri  / \myref{twri},
-		read  / \myref{read},
-		sk    / \myref{sk},
-		stats / \myref{stats},
-		tdb   / \myref{tdb},
-		qdb   / \myref{qdb},
-		srch  / \myref{srch},
-		prac  / \myref{prac},
+		tdb,
+		sub[packetsub],
+		tw,
+		td,
+		rd,
+		sk,
+		st,
+		qdb,
+		se,
+		pt,
 	},
 
 	% Relationships

@@ -33,14 +33,14 @@ Description of what a “packet submission manager” is.
 None yet exist.
 
 
-# Tournament director       {#tdir}
+# Tournament director       {#td}
 Description of what a “tournament director” is.
 
 ## Existing
 Incomplete.
 
 
-# Tournament writer         {#twri}
+# Tournament writer         {#tw}
 Description of what a “tournament writer” is.
 
 ## Existing
@@ -55,7 +55,7 @@ I know nothing about this.
 #### Google Docs
 
 
-# Reader                    {#read}
+# Reader                    {#rd}
 Description of what a “reader” is.
 
 ## Existing
@@ -84,7 +84,7 @@ Description of what a “match scorekeeper is” is.
 #### Pen and paper
 
 
-# Statistics viewer         {#stats}
+# Statistics viewer         {#st}
 Description of what a “statistics viewer” is.
 
 ## Existing
@@ -110,7 +110,7 @@ Description of what a “question repository” is.
 #### https://github.com/neotenic/packets
 
 
-# Search engines            {#srch}
+# Search engines            {#se}
 Description of what a “search engine” is.
 
 ## Existing
@@ -122,7 +122,7 @@ Description of what a “search engine” is.
 #### \textsc{qbdb}
 
 
-# Practice tools            {#prac}
+# Practice tools            {#pt}
 Description of what a “practice tool” is.
 
 ## Existing
