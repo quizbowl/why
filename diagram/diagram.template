@@ -11,7 +11,7 @@
 \usetikzlibrary{graphdrawing}   % Requires luatex
 \usegdlibrary{layered}          % Requires luatex
 
-\usepackage{hyperref}
+\usepackage[frenchlinks]{hyperref}
 
 \begin{document}
 \title{$title$}
