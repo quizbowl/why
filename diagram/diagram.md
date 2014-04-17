@@ -19,8 +19,8 @@ It will review which components already exist independently, and establish which
 
 \clearpage
 
-# Table of contents {-}
-The diagram below illustrates the exchange of data among the components of a complete quizbowl software suite.
+# Contents {-}
+The diagram below illustrates the flow of data among the components of a complete quizbowl software suite.
 Click on a component to jump to that section.
 
 \vfill

@@ -18,7 +18,7 @@
 ] {
 	% Main components
 	{ [nodes={component}]
-		tdb,
+		tdb[< tail anchor=],
 		sub[sub],
 		tw,
 		td,
@@ -50,7 +50,7 @@
 	},
 
 	{
-		tdb -- [tail anchor=] rg -> [bend left=20] td,
+		tdb -- rg -> [bend left=20] td,
 		td  -- in -> rd,
 		tw  -- fp -> { rd, qdb },
 		rd  -- bz -> sk,
