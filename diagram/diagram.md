@@ -8,7 +8,7 @@ author: Ophir Lifshitz
 \newcommand\SQBS{\textsc{sqbs}}
 
 # Introduction {-}
-Occasionally, people have suggested organizing a public dialogue about “software in quizbowl” to be scheduled after the mob of national tournaments. To prepare for such a discussion, I thought it would be valuable to get everyone on the same page about the state of software in quizbowl — not just for “software people,” but to help “non-software people” understand how the full scope of quizbowl software works together, and what additional progress could be achieved.
+Occasionally, people have suggested organizing a public dialogue about “software in quizbowl” to be scheduled after the mob of national tournaments. To prepare for such a discussion, I thought it would be valuable to get everyone on the same page about the state of software in quizbowl — not just for “software people,” but to help “non-software people” understand how the full scope of quizbowl software works together. It would also be beneficial to the discussion to standardize the terminology used for the different components of the suite.
 
 This document intends to describe the components of a hypothetical quizbowl software suite and the relationships between those components. It will review which components already exist independently, and establish which components are still needed and how they will interface with the already existing ones.
 
