@@ -3,7 +3,7 @@
 \begin{tikzpicture}
 \tikzset{
 	>=latex',
-	component/.style={graphs/typeset={\myref{\tikzgraphnodefullname}}},
+	component/.style={draw, inner xsep=0.5em, graphs/typeset={\myref{\tikzgraphnodefullname}}},
 	relationship/.style={},
 	sub/.style={gray!35},
 }
@@ -18,16 +18,16 @@
 ] {
 	% Main components
 	{ [nodes={component}]
-		tdb[< tail anchor=],
-		sub[sub],
+		tdb [< tail anchor=],
+		sub [sub, nudge left=1em],
 		tw,
 		td,
 		rd,
 		sk,
 		st,
 		qdb,
-		se,
-		pt,
+		se  [nudge right=11em],
+		pt  [nudge left=1em],
 	},
 
 	% Relationships
