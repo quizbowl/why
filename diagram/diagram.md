@@ -26,6 +26,15 @@ The diagram below illustrates the exchange of data among the components of a com
 \vfill
 \clearpage
 
+
+
+# Tournament database       {#tdb}
+Description of what a “tournament database” is.
+
+## Existing
+#### \HSQBorg's tournament database
+
+
 # Packet submission manager {#sub}
 Description of what a “packet submission manager” is.
 
@@ -90,13 +99,6 @@ Description of what a “statistics viewer” is.
 ## Existing
 #### \HSQBorg's \SQBS{} hosting
 #### \textsc{naqt}'s stats database
-
-
-# Tournament database       {#tdb}
-Description of what a “tournament database” is.
-
-## Existing
-#### \HSQBorg's tournament database
 
 
 # Question repository       {#qdb}

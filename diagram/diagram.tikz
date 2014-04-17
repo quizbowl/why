@@ -5,7 +5,7 @@
 	>=latex',
 	component/.style={graphs/typeset={\myref{\tikzgraphnodefullname}}},
 	relationship/.style={},
-	packetsub/.style={gray!50},
+	sub/.style={gray!50},
 }
 
 \graph[
@@ -13,14 +13,13 @@
   tail anchor=south,
   level distance=4em,
   sibling sep=1.75em,
-  component align=center,
-  nodes={text depth=2pt},
+  nodes={align=center,text depth=0.5ex},
   edges={semithick},
 ] {
 	% Main components
 	{ [nodes={component}]
 		tdb,
-		sub[packetsub],
+		sub[sub],
 		tw,
 		td,
 		rd,
@@ -33,24 +32,39 @@
 
 	% Relationships
 	{ [nodes={relationship}] %[nodes={draw, minimum width=10em}]
-		tdir  -- "provides schedules, team info to"   -> read,
-		twri  -- provides final packets to            -> { read, qdb },
-		read  -- records score and buzzes for         -> sk,
-		sk    -- sends stats for assembly by          -> stats,
-		stats -- provides link to stats for           -> tdb,
-		qdb   -- provides many questions to           -> { srch, prac }
+		{ [same layer]
+		rg / enables registrations to,
+		rq / "enforces required\\packet submissions" [sub],
+		% ln / links to,
+		},
+		in / "provides schedules\\and team info to",
+		fp / provides final packets to,
+		bz / "records score and\\buzz locations for",
+		sa / sends stats for assembly by,
+		pq / provides many questions to,
+		% Packet submission
+		{ [nodes={sub}]
+		sc / "makes schedule with\\correct byes for",
+		ed / "sends submissions\\for editing to",
+		}
 	},
 
-	% Labeled sublayout
-	% "(Only for packet submission tournaments)" [packetsub]
-	// { [nodes={packetsub}, edges={packetsub}]
-		sub   -- b / makes schedule with byes for,
-		sub   -- a / sends packets for editing to,
+	{
+		tdb -- [tail anchor=] rg -> [bend left=20] td,
+		td  -- in -> rd,
+		tw  -- fp -> { rd, qdb },
+		rd  -- bz -> sk,
+		sk  -- sa -> st,
+		% tdb -- ln -> st,
+		% st  -- ln -> tdb,
+		qdb -- pq -> { se, pt[> {minimum layers=2, bend left=0}] },
+		% Packet submission
+		{ [edges={sub}]
+		tdb -- rq -> sub,
+		sub -- sc -> td,
+		sub -- ed -> tw,
+		},
 	},
-	{ [edges={packetsub}]
-		b -> tdir,
-		a -> twri,
-	}
 };
 
 \end{tikzpicture}
