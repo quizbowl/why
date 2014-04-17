@@ -8,20 +8,24 @@ author: Ophir Lifshitz
 \newcommand\SQBS{\textsc{sqbs}}
 
 # Introduction {-}
-Occasionally, people have suggested organizing a public dialogue about “software in quizbowl” to be scheduled after the mob of national tournaments. To prepare for such a discussion, I thought it would be valuable to get everyone on the same page about the state of software in quizbowl — not just for “software people,” but to help “non-software people” understand how the full scope of quizbowl software works together. It would also be beneficial to the discussion to standardize the terminology used for the different components of the suite.
+Occasionally, people have suggested organizing a public dialogue about “software in quizbowl” to be scheduled after the mob of national tournaments.
+To prepare for such a discussion, I thought it would be valuable to get everyone on the same page about the state of software in quizbowl — not just for “software people,” but to help “non-software people” understand how the full scope of quizbowl software works together.
+It would also be beneficial to the discussion to standardize the terminology used for the different components of the suite.
 
-This document intends to describe the components of a hypothetical quizbowl software suite and the relationships between those components. It will review which components already exist independently, and establish which components are still needed and how they will interface with the already existing ones.
+This document intends to describe the components of a hypothetical quizbowl software suite and the relationships between those components.
+It will review which components already exist independently, and establish which components are still needed and how they will interface with the already existing ones.
 
 <!-- Explain the purpose of the quizbowl organization on Github here -->
 
 \clearpage
 
 # Table of contents {-}
-The diagram below illustrates the exchange of data among the components of a complete quizbowl software suite. Click on a component to jump to that section.
+The diagram below illustrates the exchange of data among the components of a complete quizbowl software suite.
+Click on a component to jump to that section.
 
 \vfill
 \begin{center}
-	\input{diagram.tikz}
+\input{diagram.tikz}
 \end{center}
 \vfill
 \clearpage
