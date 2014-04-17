@@ -2,8 +2,9 @@
 
 \usepackage{fontspec}
 \setmainfont[Ligatures=TeX
+, ItalicFont=Lyon Text Regular Italic
 , BoldFont=Lyon Text Semibold
-]{Lyon Text}
+]{Lyon Text Regular}
 
 \usepackage{tikz}
 \usetikzlibrary{arrows}
