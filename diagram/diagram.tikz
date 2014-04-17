@@ -5,7 +5,7 @@
 	>=latex',
 	component/.style={graphs/typeset={\myref{\tikzgraphnodefullname}}},
 	relationship/.style={},
-	sub/.style={gray!50},
+	sub/.style={gray!35},
 }
 
 \graph[
@@ -31,17 +31,17 @@
 	},
 
 	% Relationships
-	{ [nodes={relationship}] %[nodes={draw, minimum width=10em}]
+	{ [nodes={relationship}]
 		{ [same layer]
-		rg / enables registrations to,
+		rg / "enables registrations to",
 		rq / "enforces required\\packet submissions" [sub],
 		% ln / links to,
 		},
 		in / "provides schedules\\and team info to",
-		fp / provides final packets to,
+		fp / "provides final packets to",
 		bz / "records score and\\buzz locations for",
-		sa / sends stats for assembly by,
-		pq / provides many questions to,
+		sa / "sends stats for assembly by",
+		pq / "provides many questions to",
 		% Packet submission
 		{ [nodes={sub}]
 		sc / "makes schedule with\\correct byes for",
@@ -55,8 +55,6 @@
 		tw  -- fp -> { rd, qdb },
 		rd  -- bz -> sk,
 		sk  -- sa -> st,
-		% tdb -- ln -> st,
-		% st  -- ln -> tdb,
 		qdb -- pq -> { se, pt[> {minimum layers=2, bend left=0}] },
 		% Packet submission
 		{ [edges={sub}]
@@ -64,6 +62,8 @@
 		sub -- sc -> td,
 		sub -- ed -> tw,
 		},
+		% tdb -- ln -> st,
+		% st  -- ln -> tdb, % Makes the graph cyclic
 	},
 };
 
