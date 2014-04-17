@@ -11,8 +11,8 @@
 \graph[
   layered layout,
   tail anchor=south,
-  level distance=4em,
-  sibling sep=1.75em,
+  level distance=4.25em,
+  sibling sep=1em,
   nodes={align=center,text depth=0.5ex},
   edges={semithick},
 ] {
@@ -33,7 +33,7 @@
 	% Relationships
 	{ [nodes={relationship}]
 		{ [same layer]
-		rg / "enables registrations to",
+		rg / "enables teams\\to register for",
 		rq / "enforces required\\packet submissions" [sub],
 		% ln / links to,
 		},

@@ -39,8 +39,8 @@ Description of what a “tournament database” is.
 #### \HSQBorg's tournament database
 
 
-# Packet submission manager {#sub}
-Description of what a “packet submission manager” is.
+# Submission manager {#sub}
+Description of what a “submission manager” is.
 
 ## Existing
 None yet exist.
