@@ -35,7 +35,7 @@ Click on a component to jump to that section.
 # Tournament database       {#tdb}
 Description of what a “tournament database” is.
 
-- Stores data about all schools, organizations, people, etc., involved in quizbowl.
+- Stores data on all schools, organizations, people, etc., involved in quizbowl.
     - Generate contact lists for hosts to send out tournament announcements and find willing staffers in the area.
     - Limit public access to sensitive data.
 - For a host to announce a tournament, link to their [Tournament director] public main page/registration form.
@@ -205,7 +205,7 @@ Description of what a “practice tool” is.
 \appendix
 
 # Potential components
-This appendix lists components that, while out of the scope of a hypothetical quizbowl software suite, still interface with the same data used by the suite.
+This appendix lists components that, while outside of the scope of a hypothetical quizbowl software suite, still interface with the same data used by the suite.
 
 ## Smart buzzer system
 Description of what a “smart buzzer system” is.
