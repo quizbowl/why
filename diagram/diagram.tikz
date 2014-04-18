@@ -4,13 +4,13 @@
 \tikzset{
 	>=latex',
 	component/.style={draw, inner xsep=0.5em, graphs/typeset={\myref{\tikzgraphnodefullname}}},
+	wedge/.style={< tail anchor=south},
 	relationship/.style={},
 	sub/.style={gray!35},
 }
 
 \graph[
   layered layout,
-  tail anchor=south,
   level distance=4.25em,
   sibling sep=1em,
   nodes={align=center,text depth=0.5ex},
@@ -18,16 +18,16 @@
 ] {
 	% Main components
 	{ [nodes={component}]
-		tdb [< tail anchor=],
-		sub [sub, nudge left=1em],
+		tdb,
+		sub [sub],
 		tw,
 		td,
 		rd,
 		sk,
 		st,
 		qdb,
-		se  [nudge right=11em],
-		pt  [nudge left=1em],
+		se,%  [nudge right=11em],
+		pt  [nudge right=1em],
 	},
 
 	% Relationships
@@ -38,10 +38,10 @@
 		% ln / links to,
 		},
 		in / "provides schedules\\and team info to",
-		fp / "provides final packets to",
+		fp / "provides final packets to" [wedge],
 		bz / "records score and\\buzz locations for",
 		sa / "sends stats for assembly by",
-		pq / "provides many questions to",
+		pq / "provides many questions to" [wedge],
 		% Packet submission
 		{ [nodes={sub}]
 		sc / "makes schedule with\\correct byes for",
