@@ -71,6 +71,7 @@ Description of what a “tournament director” is.
 - Registration (including player rosters)
 - Finances (including invoices, possibly e-payment)
 - Brackets + seeding
+    - Easy rescheduling in case of teams dropping at the last minute
 - Publish updates (list of registered teams, building address, tournament date and time, parking amenities, fee structure, contact details)
 - Track moderators (room assignments)
 - Track equipment (buzzer and laptop assignments)
@@ -93,6 +94,8 @@ Description of what a “tournament writer” is.
 - Adjust distribution
 - _Feng shui_ packet randomization (anti-clustering/dithering vs. truly random)
 - See overall status/progress chart/timeline
+- Security
+- Potential “playtesting infrastructure”
 
 ## Existing
 ### Closed-source niche software
@@ -116,6 +119,12 @@ A 2-year-old \textsc{php} site.
 # Packet reader             {#rd}
 Description of what a “packet reader” is.
 
+- Displays a (parsed) packet one question at a time.
+- Interfaces with [Match scorekeeper] to:
+    - Show the current score
+    - Provide buttons to record game events
+- Receives information about each match from the [Tournament director], including team and player names
+    - Could potentially verify that none of the players wrote a question in the current packet
 - Protests (immediate adjudication if resolved in a quicker game room before the slower game rooms get to the question)
 - Communication about lunchtime, when and where possible tiebreakers will be held, malfunctioning equipment (buzzers, laptops, timers), other news
 - Passwords and progressive unlocking (to minimize the risk of reading the wrong packet)
@@ -129,7 +138,19 @@ Description of what a “packet reader” is.
 
 
 # Match scorekeeper         {#sk}
-Description of what a “match scorekeeper is” is.
+Description of what a “match scorekeeper” is.
+
+- Record all types of events:
+    - Buzz = (Word × Player × Point value)
+    - Bonus part = (Team × Point value)
+    - Throw out tossup or bonus
+    - Substitution = (Player in × Player out)
+    - Protest
+    - Tiebreaker
+    - Timeout
+- Undo/redo
+
+Could potentially interface with [Smart buzzer system] to track buzzer races.
 
 ## Existing
 ### Closed-source niche software
@@ -150,8 +171,15 @@ Description of what a “match scorekeeper is” is.
 Description of what a “statistics viewer” is.
 
 - Post stats immediately
+    - [Tournament director] can observe progress of each game room
 - Instant results after each part of the tournament for easy rebracketing
-- Live corrections (during or after tournament)
+- Instant corrections (during or after tournament)
+- Summarize data by:
+    - Player
+    - Team
+    - Tossup, with a histogram of buzz locations
+    - Bonus
+    - Category
 - Queryable API (to easily create rankings or school/team/player reports)
 - Could support custom aggregation functions
 
@@ -183,7 +211,7 @@ Description of what a “search engine” is.
 ## Existing
 ### Closed-source service
 #### \textsc{acfdb}
-#### Gyaankosh
+<!-- #### Gyaankosh -->
 
 ### Open-ish-source service
 #### \textsc{qbdb}
