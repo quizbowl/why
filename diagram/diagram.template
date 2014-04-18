@@ -13,6 +13,7 @@
 \usegdlibrary{layered}          % Requires luatex
 
 \usepackage[hidelinks, frenchlinks]{hyperref}
+\usepackage{lua-check-hyphen}   % See input.uhy
 
 \begin{document}
 \title{$title$}
