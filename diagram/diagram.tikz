@@ -32,7 +32,7 @@
 
 	% Relationships
 	{ [nodes={relationship}]
-		{ [same layer]
+		{ %[same layer]
 		rg / "enables teams\\to register for",
 		rq / "enforces required\\packet submissions" [sub],
 		% ln / links to,
@@ -50,7 +50,7 @@
 	},
 
 	{
-		tdb -- rg -> [bend left=20] td,
+		tdb -- [minimum layers=3] rg -> td,
 		td  -- in -> rd,
 		tw  -- fp -> { rd, qdb },
 		rd  -- bz -> sk,
