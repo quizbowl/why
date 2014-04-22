@@ -8,3 +8,4 @@ Please add your name to this file by submitting a pull request.
 - Balachandar 'Raj' Kesavan (rajk or [rajksvn](https://bitbucket.org/rajksvn))
 - Ramapriya Rangaraju ([sephirothrr](https://github.com/sephirothrr))
 - Gregory Gauthier ([rjaguar3](https://github.com/rjaguar3))
+- Jeffrey Hill ([jeffreymhill](https://github.com/jeffreymhill))
