@@ -10,3 +10,4 @@ Please add your name to this file by submitting a pull request.
 - Gregory Gauthier ([rjaguar3](https://github.com/rjaguar3))
 - Jeffrey Hill ([jeffreymhill](https://github.com/jeffreymhill))
 - Jim Puls ([puls](https://github.com/puls))
+- Alejandro Lopez-Lago ([alopezlago](https://github.com/alopezlago))
