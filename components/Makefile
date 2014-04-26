@@ -1,10 +1,10 @@
-PDFS=diagram.pdf
+PDFS=components.pdf
 
 all: $(PDFS)
 
-diagram.pdf: diagram.tikz diagram.template
+components.pdf: components.tikz
 
-%.pdf: %.md
+%.pdf: %.md ../article.template
 	pandoc $< -o $@ \
-	--template=diagram.template \
+	--template=../article.template \
 	--latex-engine=lualatex

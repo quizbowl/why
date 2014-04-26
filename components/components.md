@@ -25,7 +25,7 @@ Click on a component to jump to that section.
 
 \vfill
 \begin{center}
-\input{diagram.tikz}
+\input{components.tikz}
 \end{center}
 \vfill
 \clearpage
