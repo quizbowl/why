@@ -1,24 +1,23 @@
 \begin{tikzpicture}
 \tikzset{
 	>=latex',
-	component/.style={draw, inner xsep=0.5em, graphs/typeset={\myref{\tikzgraphnodefullname}}},
+	class/.style={draw, inner xsep=0.5em, graphs/typeset={\myref{\tikzgraphnodefullname}}},
 	many to many/.style={dashed},
 	mine color/.style={gray!35},
 	mine/.style={mine color, > {mine color}, < {mine color}},
+	graphs/legend/.style={grow right sep=2em, nodes={xshift=10em, yshift=9em, font=\small}},
+	self loop left/.style={out=195, in=165, looseness=4},
 }
 
 \graph[
-	grow'=down,
-	level distance=6em,
-	sibling sep=1em,
-	component sep=3em,
+	grow'=down, level distance=6em, sibling sep=1em, component sep=3em,
 	nodes={align=center,text depth=0.5ex},
 	edges={semithick},
 ] {
-	% Main components
-	{ [nodes={component}]
+	% Main classes
+	{ [nodes={class}]
 		// [layered layout] {
-			% Tournament components [cluster node]
+			% Tournament-related classes
 			events [mine],
 			games,
 			questions [mine],
@@ -31,7 +30,7 @@
 			tournaments,
 			formats [mine],
 			sets [mine],
-			%
+			% Many-to-one relationships among tournament-related classes
 			{ [weight=4]
 			events      -> games,
 			rounds      -> brackets,
@@ -47,33 +46,34 @@
 			rounds      -> packets,
 			questions   -> packets,
 			packets     -> sets,
-			stages      -> [out=195, in=165, looseness=4] stages,
+			stages      -> [self loop left] stages,
 			%
-			% School components [cluster node]
+			% School-related classes
 			schools,
 			teams,
 			players,
 			moderators [mine],
 			buzzers [mine],
-			%
+			% Many-to-one relationships among school-related classes
 			teams      -> schools,
 			players    -> teams,
 			schools    <- { [same layer] buzzers [> weight=2], moderators },
-			%%%
+			%
+			% Vertically align the two components at these nodes
 			{ [align here] schools, brackets }
 		},
 	},
 
 	{ [edges={many to many}]
 		brackets  <-> locations,
-		brackets  <-> [looseness=0.6, in=230, out=0] teams,
+		brackets  <-> [in=230, out=0, looseness=0.6] teams,
 		games     <-> teams,
 		locations <-> buzzers,
 		locations <-> moderators,
 		events    <-> { players, teams },
 	},
 
-	{ [grow right sep=2em, nodes={xshift=10em, yshift=9em, font=\small}]
+	{ [legend]
 		a / Many -> b / One,
 		c / Many <-> [many to many] d / Many,
 	},
