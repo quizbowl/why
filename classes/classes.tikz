@@ -47,6 +47,7 @@
 			rounds      -> packets,
 			questions   -> packets,
 			packets     -> sets,
+			stages      -> [out=195, in=165, looseness=4] stages,
 			%
 			% School components [cluster node]
 			schools,
