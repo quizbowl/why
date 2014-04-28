@@ -1,17 +1,16 @@
 \begin{tikzpicture}
 \tikzset{
 	>=latex',
-	class/.style={draw, inner xsep=0.5em, graphs/typeset={\myref{\tikzgraphnodefullname}}},
+	class/.style={draw, inner xsep=0.5em, align=center, text depth=0.5ex, graphs/typeset={\myref{\tikzgraphnodefullname}}},
 	many to many/.style={dashed},
 	mine color/.style={gray!35},
 	mine/.style={mine color, > {mine color}, < {mine color}},
-	graphs/legend/.style={grow right sep=2em, nodes={xshift=10em, yshift=9em, font=\small}},
+	graphs/legend/.style={grow right sep=2em, nodes={xshift=10em, yshift=9em, font=\small, text depth=0.25ex}},
 	self loop left/.style={out=195, in=165, looseness=4},
 }
 
 \graph[
 	grow'=down, level distance=6em, sibling sep=1em, component sep=3em,
-	nodes={align=center,text depth=0.5ex},
 	edges={semithick},
 ] {
 	% Main classes
