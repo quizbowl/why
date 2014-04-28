@@ -1,67 +1,67 @@
 \begin{tikzpicture}
 \tikzset{
-  >=latex',
-  component/.style={draw, inner xsep=0.5em, graphs/typeset={\myref{\tikzgraphnodefullname}}},
-  many to many/.style={dashed},
+	>=latex',
+	component/.style={draw, inner xsep=0.5em, graphs/typeset={\myref{\tikzgraphnodefullname}}},
+	many to many/.style={dashed},
 }
 
 \graph[
-  layered layout,
-  level distance=6em,
-  sibling sep=1em,
-  nodes={align=center,text depth=0.5ex},
-  edges={semithick},
+	layered layout,
+	level distance=6em,
+	sibling sep=1em,
+	nodes={align=center,text depth=0.5ex},
+	edges={semithick},
 ] {
-  % Main components
-  { [nodes={component}]
-    // [layered layout] {
-      % Tournament components [cluster node]
-      formats,
-      tournaments,
-      stages,
-      brackets,
-      rounds,
-      packets,
-      sets,
-      locations,
-      games,
-      %
-      tournaments -> sets,
-      packets     -> sets,
-      tournaments -> [weight=3] formats,
-      stages      -> [weight=3] tournaments,
-      brackets    -> [weight=3] stages,
-      rounds      -> [weight=3] brackets,
-      rounds      -> [out=320, in=90] packets,
-      games       -> [weight=3] locations,
-      games       -> rounds,
-      %
-      % School components [cluster node]
-      schools,
-      teams,
-      players,
-      moderators,
-      buzzers,
-      %
-      {[grow'=down]
-      teams      -> [weight=5] schools,
-      players    -> teams,
-      buzzers    -> schools,
-      moderators -> [minimum layers=0] schools,
-      },
-      %%%
-      { [align here] schools, packets }
-    },
-  },
-  % a -- b,
+	% Main components
+	{ [nodes={component}]
+		// [layered layout] {
+			% Tournament components [cluster node]
+			formats,
+			tournaments,
+			stages,
+			brackets,
+			rounds,
+			packets,
+			sets,
+			locations,
+			games,
+			%
+			tournaments -> sets,
+			packets     -> sets,
+			tournaments -> [weight=3] formats,
+			stages      -> [weight=3] tournaments,
+			brackets    -> [weight=3] stages,
+			rounds      -> [weight=3] brackets,
+			rounds      -> [out=320, in=90] packets,
+			games       -> [weight=3] locations,
+			games       -> rounds,
+			%
+			% School components [cluster node]
+			schools,
+			teams,
+			players,
+			moderators,
+			buzzers,
+			%
+			{[grow'=down]
+			teams      -> [weight=5] schools,
+			players    -> teams,
+			buzzers    -> schools,
+			moderators -> [minimum layers=0] schools,
+			},
+			%%%
+			{ [align here] schools, packets }
+		},
+	},
+	% a -- b,
 
-  { [edges={many to many}]
-    brackets  <-> locations,
-    brackets  <-> [looseness=0.5, in=230, out=-5] teams,
-    games     <-> teams,
-    locations <-> buzzers,
-    locations <-> moderators,
-  },
+	{ [edges={many to many}]
+		brackets  <-> locations,
+		brackets  <-> [looseness=0.5, in=230, out=-5] teams,
+		games     <-> teams,
+		locations <-> buzzers,
+		locations <-> moderators,
+	},
 };
 
 \end{tikzpicture}

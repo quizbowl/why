@@ -8,11 +8,11 @@
 }
 
 \graph[
-  layered layout,
-  level distance=4.25em,
-  sibling sep=1em,
-  nodes={align=center,text depth=0.5ex},
-  edges={semithick},
+	layered layout,
+	level distance=4.25em,
+	sibling sep=1em,
+	nodes={align=center,text depth=0.5ex},
+	edges={semithick},
 ] {
 	% Main components
 	{ [nodes={component}]
