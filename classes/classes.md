@@ -26,10 +26,11 @@ Click on a class to jump to that section.
 # Locations                 {#locations}
 # Brackets                  {#brackets}
 # Stages                    {#stages}
-# Packets                   {#packets}
+# Divisions                 {#divisions}
 # Tournaments               {#tournaments}
-# Formats                   {#formats}
+# Packets                   {#packets}
 # Sets                      {#sets}
+# Formats                   {#formats}
 
 # Players                   {#players}
 # Teams                     {#teams}

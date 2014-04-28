@@ -18,6 +18,7 @@
 			% Tournament components [cluster node]
 			formats,
 			tournaments,
+			divisions,
 			stages,
 			brackets,
 			rounds,
@@ -29,7 +30,8 @@
 			tournaments -> sets,
 			packets     -> sets,
 			tournaments -> [weight=3] formats,
-			stages      -> [weight=3] tournaments,
+			divisions   -> [weight=3] tournaments,
+			stages      -> [weight=3] divisions,
 			brackets    -> [weight=3] stages,
 			rounds      -> [weight=3] brackets,
 			rounds      -> [out=320, in=90] packets,
