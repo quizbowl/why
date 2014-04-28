@@ -27,7 +27,9 @@
 			packets [mine],
 			sets [mine],
 			locations [mine],
+			questions [mine],
 			games,
+			events [mine],
 			%
 			tournaments -> sets,
 			packets     -> sets,
@@ -39,6 +41,9 @@
 			rounds      -> [out=320, in=90] packets,
 			games       -> [weight=3] locations,
 			games       -> rounds,
+			events      -> games,
+			questions   -> packets,
+			events      -> questions,
 			%
 			% School components [cluster node]
 			schools,
@@ -65,6 +70,7 @@
 		games     <-> teams,
 		locations <-> buzzers,
 		locations <-> moderators,
+		events    <-> { players, teams },
 	},
 };
 

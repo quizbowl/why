@@ -26,13 +26,19 @@ Click on a class to jump to that section.
 # Locations                 {#locations}
 # Brackets                  {#brackets}
 # Stages                    {#stages}
-Or “phases.”
-
+<!-- Or “phases.” -->
 # Divisions                 {#divisions}
 # Tournaments               {#tournaments}
+# Events                    {#events}
+Polymorphic.
+
+# Questions                 {#questions}
+Polymorphic.
+
 # Packets                   {#packets}
 # Sets                      {#sets}
 # Formats                   {#formats}
+
 
 # Players                   {#players}
 # Teams                     {#teams}
