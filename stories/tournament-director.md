@@ -1,4 +1,7 @@
-### Tournament Director User Stories
+---
+title: Tournament director user stories
+author: Alejandro López-Lago
+---
 
 |Priority	|User Type	|User Story  |
 |---------|-----------|------------|
@@ -39,9 +42,9 @@ If we decide to group the package submission code with the Tournament Director p
 
 
 
-### Legend
+# Legend
 
-##### Users
+## Users
 | User Type | Description |
 |-----------|-------------|
 |Administrator|Runs the service|
@@ -51,8 +54,9 @@ If we decide to group the package submission code with the Tournament Director p
 |Anonymous|An individual not related to the tournament|
 |All|All of the user types|
 
-#####Priority
+## Priority
 In order of most important to least important:
+
 - Must-have
 - Important
 - Moderate
