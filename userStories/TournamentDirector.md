@@ -33,7 +33,7 @@ If we decide to group the package submission code with the Tournament Director p
 ||Tournament Director|I want to assign penalties for a packet|
 ||Tournament Director|I want to "accept/confirm as submitted" a submitted packet|
 ||Team Contact|I want to submit my packet|
-||Team Contact|I want to resbumit a packet|
+||Team Contact|I want to resubmit a packet|
 ||Team Contact|I want to withdraw a submitted packet|
 ||All|I want to see who submitted a packet and when it was submitted|
 
