@@ -26,6 +26,8 @@ Click on a class to jump to that section.
 # Locations                 {#locations}
 # Brackets                  {#brackets}
 # Stages                    {#stages}
+Or “phases.”
+
 # Divisions                 {#divisions}
 # Tournaments               {#tournaments}
 # Packets                   {#packets}
