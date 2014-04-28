@@ -10,7 +10,7 @@ author: Alejandro López-Lago
 - I want to create a tournament announcement
 - I want to change the date/time of a tournament
 - I want to change the location of a tournament
-- I want to set the fee structure of the tournament
+- I want to set the fee structure of a tournament
 - I want to publicize my tournament to nearby teams
 - I want to know how many teams have signed up
 - I want to know how many buzzers there will be
@@ -29,8 +29,8 @@ author: Alejandro López-Lago
 ## All
 - I want to communicate with the Tournament Director
 - I want to see when and where a tournament is
-- I want to see what other teams are attending the tournament
-- I want to see which players are playing at this tournament
+- I want to see what other teams are attending a tournament
+- I want to see which players are playing at a tournament
 
 # Packet submission stories
 ## Tournament Director
@@ -57,7 +57,7 @@ Runs the tournament
 Repsonsible for tournament registration
 
 #### Participant
-A member of the Team Contact's team. Not responsible for registration
+A team member not responsible for registration
 
 #### Anonymous
 An individual not related to the tournament
