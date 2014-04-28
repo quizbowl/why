@@ -28,8 +28,7 @@ author: Alejandro López-Lago
 ||All|I want to see what other teams are attending the tournament|
 ||All|I want to see which players are playing at this tournament|
 
-
-If we decide to group the package submission code with the Tournament Director program:
+If we decide to group the Packet Submission Manager with the Tournament Director:
 
 |Priority	|User Type	|User Story  |
 |---------|-----------|------------|
@@ -40,10 +39,7 @@ If we decide to group the package submission code with the Tournament Director p
 ||Team Contact|I want to withdraw a submitted packet|
 ||All|I want to see who submitted a packet and when it was submitted|
 
-
-
 # Legend
-
 ## Users
 | User Type | Description |
 |-----------|-------------|
@@ -54,7 +50,7 @@ If we decide to group the package submission code with the Tournament Director p
 |Anonymous|An individual not related to the tournament|
 |All|All of the user types|
 
-## Priority
+## Priorities
 In order of most important to least important:
 
 - Must-have
