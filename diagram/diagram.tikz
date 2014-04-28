@@ -27,7 +27,7 @@
 		st,
 		qdb,
 		se,%  [nudge right=11em],
-		pt  [nudge right=1em],
+		pt  [nudge right=2em],
 	},
 
 	% Relationships
@@ -50,17 +50,16 @@
 	},
 
 	{
-		tdb -- [minimum layers=3] rg -> td,
+		tdb -- [minimum layers=3] rg -> [weight=2] td,
 		td  -- in -> rd,
-		tw  -- fp -> { rd, qdb },
+		tw  -- fp -> { rd [> weight=0], qdb },
 		rd  -- bz -> sk,
 		sk  -- sa -> st,
 		qdb -- pq -> { se, pt[> {minimum layers=2, bend left=0}] },
 		% Packet submission
 		{ [edges={sub}]
-		tdb -- rq -> sub,
-		sub -- sc -> td,
-		sub -- ed -> tw,
+		tdb -- { [edges={weight=2}] rq ->
+			sub -- { sc, ed [> weight=3] } } -> { td, tw },
 		},
 		% tdb -- ln -> st,
 		% st  -- ln -> tdb, % Makes the graph cyclic
