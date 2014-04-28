@@ -8,9 +8,10 @@
 }
 
 \graph[
-	layered layout,
+	grow'=down,
 	level distance=6em,
 	sibling sep=1em,
+	component sep=3em,
 	nodes={align=center,text depth=0.5ex},
 	edges={semithick},
 ] {
@@ -18,32 +19,34 @@
 	{ [nodes={component}]
 		// [layered layout] {
 			% Tournament components [cluster node]
-			formats [mine],
-			tournaments,
-			divisions,
-			stages,
-			brackets,
+			events [mine],
+			games,
+			questions [mine],
+			locations [mine],
 			rounds,
 			packets [mine],
+			brackets,
+			stages,
+			divisions,
+			tournaments,
+			formats [mine],
 			sets [mine],
-			locations [mine],
-			questions [mine],
-			games,
-			events [mine],
 			%
-			tournaments -> sets,
-			packets     -> sets,
-			tournaments -> [weight=3] formats,
-			divisions   -> [weight=3] tournaments,
-			stages      -> [weight=3] divisions,
-			brackets    -> [weight=3] stages,
-			rounds      -> [weight=3] brackets,
-			rounds      -> [out=320, in=90] packets,
-			games       -> [weight=3] locations,
-			games       -> rounds,
+			{ [weight=4]
 			events      -> games,
-			questions   -> packets,
+			rounds      -> brackets,
+			brackets    -> stages,
+			stages      -> divisions,
+			divisions   -> tournaments,
+			tournaments -> formats,
+			},
+			games       -> [weight=2] locations,
+			games       -> rounds,
+			tournaments -> sets,
 			events      -> questions,
+			rounds      -> packets,
+			questions   -> packets,
+			packets     -> sets,
 			%
 			% School components [cluster node]
 			schools,
@@ -52,21 +55,17 @@
 			moderators [mine],
 			buzzers [mine],
 			%
-			{[grow'=down]
-			teams      -> [weight=5] schools,
+			teams      -> schools,
 			players    -> teams,
-			buzzers    -> schools,
-			moderators -> [minimum layers=0] schools,
-			},
+			schools    <- { [same layer] buzzers [> weight=2], moderators },
 			%%%
-			{ [align here] schools, packets }
+			{ [align here] schools, brackets }
 		},
 	},
-	% a -- b,
 
 	{ [edges={many to many}]
 		brackets  <-> locations,
-		brackets  <-> [looseness=0.5, in=230, out=-5] teams,
+		brackets  <-> [looseness=0.6, in=230, out=0] teams,
 		games     <-> teams,
 		locations <-> buzzers,
 		locations <-> moderators,
