@@ -1,5 +1,3 @@
-\newcommand\myref[1]{\ref{#1}. \textbf{\nameref{#1}}\\\footnotesize p. \pageref{#1}}
-
 \begin{tikzpicture}
 \tikzset{
 	>=latex',

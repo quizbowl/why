@@ -1,6 +1,4 @@
-\newcommand\myref[1]{\ref{#1}. \textbf{\nameref{#1}}\\\footnotesize p. \pageref{#1}}
-
-\noindent\begin{center}\begin{tikzpicture}
+\begin{tikzpicture}
 \tikzset{
   >=latex',
   component/.style={draw, inner xsep=0.5em, graphs/typeset={\myref{\tikzgraphnodefullname}}},
@@ -66,4 +64,4 @@
   },
 };
 
-\end{tikzpicture}\end{center}
+\end{tikzpicture}
