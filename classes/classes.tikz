@@ -3,7 +3,7 @@
 	>=latex',
 	component/.style={draw, inner xsep=0.5em, graphs/typeset={\myref{\tikzgraphnodefullname}}},
 	many to many/.style={dashed},
-	mine color/.style={gray!25},
+	mine color/.style={gray!35},
 	mine/.style={mine color, > {mine color}, < {mine color}},
 }
 
@@ -71,6 +71,11 @@
 		locations <-> buzzers,
 		locations <-> moderators,
 		events    <-> { players, teams },
+	},
+
+	{ [grow right sep=2em, nodes={xshift=10em, yshift=9em, font=\small}]
+		a / Many -> b / One,
+		c / Many <-> [many to many] d / Many,
 	},
 };
 
