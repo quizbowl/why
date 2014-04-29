@@ -20,7 +20,7 @@ It will review which components already exist independently, and establish which
 \clearpage
 
 # Contents {-}
-The diagram below illustrates the flow of data among the components of a complete quizbowl software suite.
+This diagram illustrates the flow of data among the components of a complete quizbowl software suite.
 Click on a component to jump to that section.
 
 \vfill
