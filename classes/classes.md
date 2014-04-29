@@ -27,7 +27,7 @@ Click on a class to jump to that section.
 ## Divisions                 {#divisions}
 ## Tournaments               {#tournaments}
 ## Events                    {#events}
-Polymorphic; see “Match scorekeeper” in the components document.
+Polymorphic; see [Match scorekeeper](#sk) in the components document.
 
 ## Questions                 {#questions}
 Polymorphic: Question = Tossup of Words | Bonus of Parts.
