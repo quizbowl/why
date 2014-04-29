@@ -3,12 +3,12 @@ title: Quizbowl object model
 author: Ophir Lifshitz
 ---
 
-# Introduction {-}
+## Introduction {-}
 Text here
 
 \clearpage
 
-# Contents {-}
+## Contents {-}
 The class diagram below illustrates the objects in a complete quizbowl software suite.
 Click on a class to jump to that section.
 
@@ -21,27 +21,27 @@ Click on a class to jump to that section.
 
 
 
-# Games                     {#games}
-# Rounds                    {#rounds}
-# Locations                 {#locations}
-# Brackets                  {#brackets}
-# Stages                    {#stages}
+## Games                     {#games}
+## Rounds                    {#rounds}
+## Locations                 {#locations}
+## Brackets                  {#brackets}
+## Stages                    {#stages}
 <!-- Or “phases.” -->
-# Divisions                 {#divisions}
-# Tournaments               {#tournaments}
-# Events                    {#events}
+## Divisions                 {#divisions}
+## Tournaments               {#tournaments}
+## Events                    {#events}
 Polymorphic; see “Match scorekeeper” in the components document.
 
-# Questions                 {#questions}
+## Questions                 {#questions}
 Polymorphic: Question = Tossup of Words | Bonus of Parts.
 
-# Packets                   {#packets}
-# Sets                      {#sets}
-# Formats                   {#formats}
+## Packets                   {#packets}
+## Sets                      {#sets}
+## Formats                   {#formats}
 
 
-# Players                   {#players}
-# Teams                     {#teams}
-# Schools                   {#schools}
-# Buzzers                   {#buzzers}
-# Moderators                {#moderators}
+## Players                   {#players}
+## Teams                     {#teams}
+## Schools                   {#schools}
+## Buzzers                   {#buzzers}
+## Moderators                {#moderators}
