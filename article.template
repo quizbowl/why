@@ -1,4 +1,4 @@
-\documentclass{article}
+\documentclass{book}
 
 \usepackage{fontspec}
 \setmainfont[Ligatures=TeX
@@ -14,6 +14,8 @@
 
 \usepackage[hidelinks, frenchlinks]{hyperref}
 \usepackage{lua-check-hyphen}   % See input.uhy
+
+\renewcommand*\thesection{\arabic{section}}
 
 \newcommand\myref[1]{\ref{#1}. \textbf{\nameref{#1}}\\\footnotesize p. \pageref{#1}}
 
