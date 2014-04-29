@@ -13,10 +13,9 @@ author: Alejandro López-Lago
 - I want to set the fee structure of a tournament
 - I want to publicize my tournament to nearby teams
 - I want to know how many teams have signed up
-- I want to know how many buzzers there will be
-- I want to know how many moderators there are
+- I want to know how many buzzers and moderators there are
 - I want to assign discounts for buzzers and moderators
-- I want to assign rooms to buzzers and moderators
+- I want to assign buzzers and moderators to rooms
 - I want to send invoices to teams that have registered
 - I want to have brackets and schedules generated for me
 
@@ -32,6 +31,7 @@ author: Alejandro López-Lago
 - I want to see when and where a tournament is
 - I want to see what other teams are attending a tournament
 - I want to see which players are playing at a tournament
+- I want to volunteer as a moderator
 
 # Packet submission stories
 ## Tournament director
