@@ -1,12 +1,14 @@
-CHAPTERS:=$(shell cat order.txt)
+ORDERS=prelims/order.txt chapters/order.txt
+CHAPTERS:=$(shell cat $(ORDERS))
+TEMPLATE=templates/book.template
 
 all: book.pdf
 
-book.pdf: */*.tikz order.txt
+book.pdf: */*/*.tikz $(ORDERS)
 
-%.pdf: $(CHAPTERS) article.template
+%.pdf: $(CHAPTERS) $(TEMPLATE)
 	pandoc $(CHAPTERS) -o $@ \
-	--template=article.template \
+	--template=$(TEMPLATE) \
 	--chapters \
 	--variable book \
 	--latex-engine=lualatex

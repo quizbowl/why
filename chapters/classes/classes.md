@@ -1,4 +1,4 @@
-\def\subdir{classes}
+\def\subdir{chapters/classes}
 
 # Quizbowl object model
 

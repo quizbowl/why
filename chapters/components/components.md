@@ -1,4 +1,4 @@
-\def\subdir{components}
+\def\subdir{chapters/components}
 
 # Components of a quizbowl software suite
 
