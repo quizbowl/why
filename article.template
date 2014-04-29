@@ -14,6 +14,7 @@
 \usegdlibrary{layered}          % Requires luatex
 
 \usepackage[hidelinks, frenchlinks]{hyperref}
+\def\frenchlinksoff{\expandafter\def\csname Hy@colorlink\endcsname##1{\begingroup}}
 \usepackage{lua-check-hyphen}   % See input.uhy
 
 \usepackage{appendix}
