@@ -4,7 +4,7 @@ author: Alejandro López-Lago
 ---
 
 # Primary stories
-## Tournament Director
+## Tournament director
 - I want to create a tournament
 - I want to cancel a tournament
 - I want to create a tournament announcement
@@ -28,18 +28,18 @@ author: Alejandro López-Lago
 - I want to set/update my team's roster
 
 ## All
-- I want to communicate with the Tournament Director
+- I want to communicate with the Tournament director
 - I want to see when and where a tournament is
 - I want to see what other teams are attending a tournament
 - I want to see which players are playing at a tournament
 
 # Packet submission stories
-## Tournament Director
+## Tournament director
 - I want to accept/confirm or reject a submitted packet
 - I want to assign monetary penalties for a packet
 
-## I want to submit my packet
-- I want to resubmit a packet
+## Team contact
+- I want to submit/resubmit a packet
 - I want to withdraw a submitted packet
 
 ## All
@@ -51,10 +51,10 @@ author: Alejandro López-Lago
 #### Administrator
 Runs the service
 
-#### Tournament Director
+#### Tournament director
 Runs the tournament
 
-#### Team Contact
+#### Team contact
 Repsonsible for tournament registration
 
 #### Participant
