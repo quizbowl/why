@@ -1,7 +1,4 @@
----
-title: Quizbowl object model
-author: Ophir Lifshitz
----
+# Quizbowl object model
 
 ## Introduction {-}
 Text here

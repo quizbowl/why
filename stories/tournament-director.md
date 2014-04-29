@@ -1,7 +1,4 @@
----
-title: Tournament director user stories
-author: Alejandro López-Lago
----
+# Tournament director user stories
 
 ## Primary stories
 ### Tournament director

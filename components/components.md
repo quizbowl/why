@@ -1,7 +1,4 @@
----
-title: Components of a quizbowl software suite
-author: Ophir Lifshitz
----
+# Components of a quizbowl software suite
 
 \newcommand\HSQB{\textsc{hsqb}}
 \newcommand\NAQT{\textsc{naqt}}
