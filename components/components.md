@@ -1,13 +1,12 @@
----
-title: Components of a quizbowl software suite
-author: Ophir Lifshitz
----
+\def\subdir{components}
+
+# Components of a quizbowl software suite
 
 \newcommand\HSQB{\textsc{hsqb}}
 \newcommand\NAQT{\textsc{naqt}}
 \newcommand\SQBS{\textsc{sqbs}}
 
-# Introduction {-}
+## Introduction {-}
 Occasionally, people have suggested organizing a public dialogue about “software in quizbowl” to be scheduled after the mob of national tournaments.
 To prepare for such a discussion, I thought it would be valuable to get everyone on the same page about the state of software in quizbowl — not just for “software people,” but to help “non-software people” understand how the full scope of quizbowl software works together.
 It would also be beneficial to the discussion to standardize the terminology used for the different components of the suite.
@@ -19,7 +18,7 @@ It will review which components already exist independently, and establish which
 
 \clearpage
 
-# Contents {-}
+## Contents {-}
 This diagram illustrates the flow of data among the components of a complete quizbowl software suite.
 Click on a component to jump to that section.
 
@@ -32,7 +31,7 @@ Click on a component to jump to that section.
 
 
 
-# Tournament database       {#tdb}
+## Tournament database       {#tdb}
 Description of what a “tournament database” is.
 
 - Stores data on all schools, organizations, people, etc., involved in quizbowl.
@@ -44,12 +43,12 @@ Description of what a “tournament database” is.
     - Subscribe for notifications when nearby tournaments are announced.
 
 
-## Existing
-#### \HSQB's tournament database
+### Existing
+##### \HSQB's tournament database
 PHP and MySQL.
 
 
-# Submission manager        {#sub}
+## Submission manager        {#sub}
 Description of what a “submission manager” is.
 
 - Publish packet due dates and fee structure.
@@ -61,11 +60,11 @@ Description of what a “submission manager” is.
 For all other packet editing functionality not unique to packet submissions, see [Tournament writer].
 Note that most of the items in this component are tightly integrated with the [Tournament director].
 
-## Existing
+### Existing
 None yet exist.
 
 
-# Tournament director       {#td}
+## Tournament director       {#td}
 Description of what a “tournament director” is.
 
 - Registration (including player rosters)
@@ -76,13 +75,13 @@ Description of what a “tournament director” is.
 - Track moderators (room assignments)
 - Track equipment (buzzer and laptop assignments)
 
-## Existing
-### Open-source niche software
-#### “Tournament Director”
+### Existing
+#### Open-source niche software
+##### “Tournament Director”
 Node and CouchDB.
 
 
-# Tournament writer         {#tw}
+## Tournament writer         {#tw}
 Description of what a “tournament writer” is.
 
 - Assign various roles (writer, subject editor, head editor, proofreader, etc.)
@@ -97,26 +96,26 @@ Description of what a “tournament writer” is.
 - Security
 - Potential “playtesting infrastructure”
 
-## Existing
-### Closed-source niche software
-#### \textsc{qems}
+### Existing
+#### Closed-source niche software
+##### \textsc{qems}
 I know nothing about this. (See Cody's screenshot of the [main page](http://i.imgur.com/hca4MjS.png))
 
-#### Ginseng
+##### Ginseng
 I know nothing about this.
 
-### Open-source niche software
-#### \textsc{qed}
+#### Open-source niche software
+##### \textsc{qed}
 An 8-year-old Perl script.
 
-#### Garuda
+##### Garuda
 A 2-year-old \textsc{php} site.
 
-### Generic software
-#### Google Docs
+#### Generic software
+##### Google Docs
 
 
-# Packet reader             {#rd}
+## Packet reader             {#rd}
 Description of what a “packet reader” is.
 
 - Displays a (parsed) packet one question at a time.
@@ -129,15 +128,15 @@ Description of what a “packet reader” is.
 - Communication about lunchtime, when and where possible tiebreakers will be held, malfunctioning equipment (buzzers, laptops, timers), other news
 - Passwords and progressive unlocking (to minimize the risk of reading the wrong packet)
 
-## Existing
-### Closed-source niche software
-#### Abacus
+### Existing
+#### Closed-source niche software
+##### Abacus
 
-### Non-software solutions
-#### Printed packets
+#### Non-software solutions
+##### Printed packets
 
 
-# Match scorekeeper         {#sk}
+## Match scorekeeper         {#sk}
 Description of what a “match scorekeeper” is.
 
 - Record all types of events:
@@ -152,22 +151,22 @@ Description of what a “match scorekeeper” is.
 
 Could potentially interface with [Smart buzzer system] to track buzzer races.
 
-## Existing
-### Closed-source niche software
-#### \SQBS{}
-#### Taft
+### Existing
+#### Closed-source niche software
+##### \SQBS{}
+##### Taft
 
-### Open-source niche software
-#### \textsc{qbsql}
+#### Open-source niche software
+##### \textsc{qbsql}
 
-### Generic software
-#### Excel
+#### Generic software
+##### Excel
 
-### Non-software solutions
-#### Pen and paper
+#### Non-software solutions
+##### Pen and paper
 
 
-# Statistics viewer         {#st}
+## Statistics viewer         {#st}
 Description of what a “statistics viewer” is.
 
 - Post stats immediately
@@ -183,12 +182,12 @@ Description of what a “statistics viewer” is.
 - Queryable API (to easily create rankings or school/team/player reports)
 - Could support custom aggregation functions
 
-## Existing
-#### \HSQB's \SQBS{} hosting
-#### \textsc{naqt}'s stats database
+### Existing
+##### \HSQB's \SQBS{} hosting
+##### \textsc{naqt}'s stats database
 
 
-# Question repository       {#qdb}
+## Question repository       {#qdb}
 Description of what a “question repository” is.
 
 - Notify all teams that played the set after it has been posted (interface with [Tournament database])
@@ -197,45 +196,45 @@ Description of what a “question repository” is.
 - Report errors
 - Permalinking
 
-## Existing
-### Unparsed questions
-#### \HSQB's packet archive
+### Existing
+#### Unparsed questions
+##### \HSQB's packet archive
 
-### Parsed questions
-#### https://github.com/neotenic/packets
+#### Parsed questions
+##### https://github.com/neotenic/packets
 
 
-# Search engines            {#se}
+## Search engines            {#se}
 Description of what a “search engine” is.
 
-## Existing
-### Closed-source service
-#### \textsc{acfdb}
+### Existing
+#### Closed-source service
+##### \textsc{acfdb}
 <!-- #### Gyaankosh -->
 
-### Open-ish-source service
-#### \textsc{qbdb}
+#### Open-ish-source service
+##### \textsc{qbdb}
 
 <!-- And many other unsuccessful ones -->
 
 
-# Practice tools            {#pt}
+## Practice tools            {#pt}
 Description of what a “practice tool” is.
 
 - Multiplayer and single player
 
-## Existing
-### Open-source niche software
-#### Protobowl
-#### TriviaBot
+### Existing
+#### Open-source niche software
+##### Protobowl
+##### TriviaBot
 
 \clearpage
-\appendix
+\csname begin\endcsname{subappendices}
 
-# Potential components
+## Potential components
 This appendix lists components that, while outside of the scope of a hypothetical quizbowl software suite, still interface with the same data used by the suite.
 
-## Smart buzzer system
+### Smart buzzer system
 Description of what a “smart buzzer system” is.
 
 - It interfaces with the [Packet reader] for player names, and interfaces with the [Match scorekeeper] for output.
@@ -243,5 +242,7 @@ Description of what a “smart buzzer system” is.
 - Keep track of buzzer races.
 - Automatically recognize the player and start the 5-second timer.
 
-## Quizbowl-playing robots
+### Quizbowl-playing robots
 Description of what a “quizbowl-playing robot” is.
+
+\csname end\endcsname{subappendices}

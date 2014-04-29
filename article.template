@@ -1,9 +1,11 @@
-\documentclass{article}
+\documentclass{$if(book)$book$else$report$endif$}
+\usepackage[textwidth=345pt,centering]{geometry}
 
 \usepackage{fontspec}
 \setmainfont[Ligatures=TeX
 , ItalicFont=Lyon Text Regular Italic
 , BoldFont=Lyon Text Semibold
+, SizeFeatures={{Size=-16},{Size=16-,Font=Lyon Display Medium}}
 ]{Lyon Text Regular}
 
 \usepackage{tikz}
@@ -13,14 +15,49 @@
 \usegdlibrary{layered}          % Requires luatex
 
 \usepackage[hidelinks, frenchlinks]{hyperref}
+\def\frenchlinksoff{\expandafter\def\csname Hy@colorlink\endcsname##1{\begingroup}}
 \usepackage{lua-check-hyphen}   % See input.uhy
 
+\usepackage{appendix}
+\renewcommand*\thesection{\arabic{section}}
+\renewcommand*\setthesection{\Alph{section}}
+
 \newcommand\myref[1]{\ref{#1}. \textbf{\nameref{#1}}\\\footnotesize p. \pageref{#1}}
+
+$if(book)$
+% Patch to remove MakeUppercase
+\makeatletter
+\renewcommand\chaptermark[1]{%
+	\markboth {\textit{% \MakeUppercase
+		\ifnum \c@secnumdepth >\m@ne
+			\if@mainmatter
+				\@chapapp\ \thechapter. \ %
+			\fi
+		\fi
+		#1}}{}}%
+\renewcommand\sectionmark[1]{%
+	\markright {\textit{% \MakeUppercase
+		\ifnum \c@secnumdepth >\z@
+			\thesection. \ %
+		\fi
+		#1}}}
+\renewcommand\tableofcontents{%
+	\if@twocolumn
+		\@restonecoltrue\onecolumn
+	\else
+		\@restonecolfalse
+	\fi
+	\chapter*{\contentsname
+			\@mkboth{%
+				 \textit{\contentsname}}{\textit{\contentsname}}}%
+	\@starttoc{toc}%
+	\if@restonecol\twocolumn\fi}
+\makeatother
+$endif$
 
 \begin{document}
 \title{$title$}
 \author{$author$}
-\maketitle
 
 $body$
 
