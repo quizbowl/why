@@ -15,14 +15,15 @@ author: Alejandro López-Lago
 - I want to know how many teams have signed up
 - I want to know how many buzzers there will be
 - I want to know how many moderators there are
-- I want to know which rooms moderators and buzzers are in
+- I want to assign discounts for buzzers and moderators
+- I want to assign rooms to buzzers and moderators
 - I want to send invoices to teams that have registered
 - I want to have brackets and schedules generated for me
-- I want to set/update my team's roster? This may be a reach/not supported
 
 ## Team contact
 - I want to register my team for a tournament
 - I want to cancel my team's registration
+- I want to register a buzzer or moderator for a tournament
 - I want to request an invoice
 - I want to set/update my team's roster
 
