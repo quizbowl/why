@@ -1,4 +1,5 @@
 \documentclass{$if(book)$book$else$report$endif$}
+\usepackage[textwidth=345pt,centering]{geometry}
 
 \usepackage{fontspec}
 \setmainfont[Ligatures=TeX
