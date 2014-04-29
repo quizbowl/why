@@ -15,7 +15,9 @@
 \usepackage[hidelinks, frenchlinks]{hyperref}
 \usepackage{lua-check-hyphen}   % See input.uhy
 
+\usepackage{appendix}
 \renewcommand*\thesection{\arabic{section}}
+\renewcommand*\setthesection{\Alph{section}}
 
 \newcommand\myref[1]{\ref{#1}. \textbf{\nameref{#1}}\\\footnotesize p. \pageref{#1}}
 
