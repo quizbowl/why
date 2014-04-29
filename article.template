@@ -1,4 +1,4 @@
-\documentclass{book}
+\documentclass{$if(book)$book$else$report$endif$}
 
 \usepackage{fontspec}
 \setmainfont[Ligatures=TeX

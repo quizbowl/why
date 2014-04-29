@@ -8,4 +8,5 @@ book.pdf: */*.tikz order.txt
 	pandoc $(CHAPTERS) -o $@ \
 	--template=article.template \
 	--chapters \
+	--variable book \
 	--latex-engine=lualatex
