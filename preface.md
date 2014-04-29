@@ -11,5 +11,3 @@ title: Quizbowl software design documents
 
 \let\myinput\input
 \renewcommand\input{}
-
-\mainmatter
