@@ -1,3 +1,5 @@
+\def\subdir{components}
+
 # Components of a quizbowl software suite
 
 \newcommand\HSQB{\textsc{hsqb}}

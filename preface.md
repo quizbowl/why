@@ -10,4 +10,4 @@ title: Quizbowl software design documents
 \tableofcontents
 
 \let\myinput\input
-\renewcommand\input{}
+\renewcommand\input[1]{\myinput{\subdir/#1}}

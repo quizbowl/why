@@ -1,3 +1,5 @@
+\def\subdir{classes}
+
 # Quizbowl object model
 
 ## Introduction {-}
