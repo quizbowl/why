@@ -8,7 +8,7 @@ title: Quizbowl software design documents
 
 \begingroup
 \frenchlinksoff
-\setcounter{tocdepth}0
+\setcounter{tocdepth}{0}
 \tableofcontents
 \endgroup
 
