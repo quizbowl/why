@@ -5,7 +5,7 @@ TEMPLATE=templates/book.template
 
 .PHONY: chapters
 
-all: book.pdf
+all: book.html book.pdf
 
 chapters: chapters/order.txt
 	for d in $(dir $(MAINCHAPTERS)); do make -C $$d; done
@@ -18,3 +18,10 @@ book.pdf: */*/*.tikz $(ORDERS)
 	--chapters \
 	--variable book \
 	--latex-engine=lualatex
+
+book.html: $(CHAPTERS) templates/book.html
+	pandoc $(CHAPTERS) -o $@ \
+	--template=templates/book.html \
+	--chapters \
+	--toc --toc-depth=1 \
+	-sSN
