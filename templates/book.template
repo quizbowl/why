@@ -59,6 +59,11 @@ $endif$
 \title{$title$}
 \author{$author$}
 
+$if(chapter)$
+\setcounter{chapter}{$chapter$}
+\addtocounter{chapter}{-1}
+$endif$
+
 $body$
 
 \end{document}
