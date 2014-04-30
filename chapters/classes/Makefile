@@ -1,3 +1,3 @@
 classes.pdf: classes.tikz
 
-include ../../chapter.mk
+include ../../one-chapter.mk

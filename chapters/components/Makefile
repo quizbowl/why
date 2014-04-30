@@ -1,3 +1,3 @@
 components.pdf: components.tikz
 
-include ../../chapter.mk
+include ../../one-chapter.mk
