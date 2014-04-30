@@ -21,6 +21,8 @@
 \usepackage{appendix}
 \renewcommand*\thesection{\arabic{section}}
 \renewcommand*\setthesection{\Alph{section}}
+\def\subapps{\csname begin\endcsname{subappendices}}
+\def\endsubapps{\csname end\endcsname{subappendices}}
 
 \newcommand\myref[1]{\ref{#1}. \textbf{\nameref{#1}}\\\footnotesize p. \pageref{#1}}
 

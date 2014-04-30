@@ -228,8 +228,7 @@ Description of what a “practice tool” is.
 ##### Protobowl
 ##### TriviaBot
 
-\clearpage
-\csname begin\endcsname{subappendices}
+\subapps
 
 ## Potential components
 This appendix lists components that, while outside of the scope of a hypothetical quizbowl software suite, still interface with the same data used by the suite.
@@ -245,4 +244,4 @@ Description of what a “smart buzzer system” is.
 ### Quizbowl-playing robots
 Description of what a “quizbowl-playing robot” is.
 
-\csname end\endcsname{subappendices}
+\endsubapps
