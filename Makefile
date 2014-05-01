@@ -25,3 +25,6 @@ book.html: templates/book.html
 	--chapters \
 	--toc --toc-depth=1 \
 	-sSN
+
+cleaner:
+	for d in $(dir $(MAINCHAPTERS)); do make -C $$d cleaner; done

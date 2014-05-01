@@ -18,3 +18,13 @@ all: $(PDFS)
 
 %.pdf: %.tex %.figlist
 	lualatex $<
+	make clean
+
+clean:
+	rm -f *.dep *.dpth *.aux *.log *.out
+
+cleaner: clean
+	rm -f *.figlist *.makefile *.md5 *.tex *.uhy
+
+cleanest: cleaner
+	rm -f *.pdf
