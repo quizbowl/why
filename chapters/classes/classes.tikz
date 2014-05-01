@@ -1,3 +1,4 @@
+\tikzsetnextfilename{\prependsubdir{classes.tikz.external}}
 \begin{tikzpicture}
 \tikzset{
 	>=latex',

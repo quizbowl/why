@@ -13,4 +13,4 @@ title: Quizbowl software design documents
 \endgroup
 
 \let\myinput\input
-\renewcommand\input[1]{\myinput{\subdir/#1}}
+\renewcommand\input[1]{\myinput{\prependsubdir{#1}}}
