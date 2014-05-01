@@ -1,2 +1,11 @@
 .DS_Store
 *.uhy
+*.dep
+*.dpth
+*.aux
+*.log
+*.out
+*.figlist
+*.makefile
+*.md5
+*.tex
