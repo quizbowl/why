@@ -15,6 +15,10 @@
 - I want to assign buzzers and moderators to rooms
 - I want to send invoices to teams that have registered
 - I want to have brackets and schedules generated for me
+- I want to admit a registered team to the confirmed field
+- I want to put a registered team on the waitlist
+- I want to move a team from the waitlist to the confirmed field
+- I want to limit the number of teams which can be in the confirmed field
 
 ### Team contact
 - I want to register my team for a tournament
@@ -22,6 +26,8 @@
 - I want to register a buzzer or moderator for a tournament
 - I want to request an invoice
 - I want to set/update my team's roster
+- I want to register multiple teams for a tournament in one session
+- I want to change the number of teams we are bringing to a tournament
 
 ### All
 - I want to communicate with the Tournament director
