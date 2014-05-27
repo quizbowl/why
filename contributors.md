@@ -1,6 +1,5 @@
+# Contributors {-}
 Please add your name to this file by submitting a pull request.
-
-# Contributors
 
 - Ophir Lifshitz ([hftf](https://github.com/hftf))
 - Jonah Greenthal ([jonahgreenthal](https://github.com/jonahgreenthal))
@@ -11,3 +10,6 @@ Please add your name to this file by submitting a pull request.
 - Jeffrey Hill ([jeffreymhill](https://github.com/jeffreymhill))
 - Jim Puls ([puls](https://github.com/puls))
 - Alejandro Lopez-Lago ([alopezlago](https://github.com/alopezlago))
+- Harry White ([hdwhite](http://github.com/hdwhite))
+
+\mainmatter

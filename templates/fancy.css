@@ -1,0 +1,27 @@
+body {
+	font-family: 'Lyon Text';
+	text-rendering: optimizeLegibility;
+}
+body h1, body h2, body h3 {
+	font-family: 'Lyon Display';
+	font-weight: 500;
+}
+
+h2 .header-section-number {
+	display: block;
+	opacity: 0;
+	-webkit-transition: opacity 0.1s ease-in;
+	   -moz-transition: opacity 0.1s ease-in;
+}
+h2:hover .header-section-number {
+	opacity: 1;
+}
+
+a {
+	-webkit-font-feature-settings: 'c2sc' 1, 'smcp' 1;
+	   -moz-font-feature-settings: 'c2sc' 1, 'smcp' 1;
+}
+#TOC a {
+	-webkit-font-feature-settings: 'c2sc' 0, 'smcp' 0;
+	   -moz-font-feature-settings: 'c2sc' 0, 'smcp' 0;
+}

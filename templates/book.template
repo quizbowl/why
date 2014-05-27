@@ -1,0 +1,84 @@
+\documentclass{$if(book)$book$else$report$endif$}
+\usepackage[textwidth=345pt,centering]{geometry}
+
+\usepackage{fontspec}
+\setmainfont[Ligatures=TeX
+, ItalicFont=Lyon Text Regular Italic
+, BoldFont=Lyon Text Semibold
+, SizeFeatures={{Size=-16},{Size=16-,Font=Lyon Display Medium}}
+]{Lyon Text Regular}
+
+\usepackage{tikz}
+\ifx\ext\relax % Load this only when externalizing
+\usetikzlibrary{arrows}
+\usetikzlibrary{graphs, quotes} % Requires pgf 3: sudo tlmgr update pgf
+\usetikzlibrary{graphdrawing}   % Requires luatex
+\usegdlibrary{layered}          % Requires luatex
+\fi
+
+\usetikzlibrary{external}
+\tikzset{
+external/mode=list and make,
+external/system call={lualatex \tikzexternalcheckshellescape
+-halt-on-error -interaction=batchmode -jobname "\image" "\\let\\ext\\relax\texsource"}
+}
+\tikzexternalize
+
+\usepackage[hidelinks, frenchlinks]{hyperref}
+\def\frenchlinksoff{\expandafter\def\csname Hy@colorlink\endcsname##1{\begingroup}}
+$if(book)$
+\usepackage{lua-check-hyphen}   % See input.uhy
+$endif$
+\newcommand\prependsubdir[1]{$if(book)$\subdir/$endif$#1}
+
+\usepackage{appendix}
+\renewcommand*\thesection{\arabic{section}}
+\renewcommand*\setthesection{\Alph{section}}
+\def\subapps{\csname begin\endcsname{subappendices}}
+\def\endsubapps{\csname end\endcsname{subappendices}}
+
+\newcommand\myref[1]{\ref{#1}. \textbf{\nameref{#1}}\\\footnotesize p. \pageref{#1}}
+
+$if(book)$
+% Patch to remove MakeUppercase
+\makeatletter
+\renewcommand\chaptermark[1]{%
+	\markboth {\textit{% \MakeUppercase
+		\ifnum \c@secnumdepth >\m@ne
+			\if@mainmatter
+				\@chapapp\ \thechapter. \ %
+			\fi
+		\fi
+		#1}}{}}%
+\renewcommand\sectionmark[1]{%
+	\markright {\textit{% \MakeUppercase
+		\ifnum \c@secnumdepth >\z@
+			\thesection. \ %
+		\fi
+		#1}}}
+\renewcommand\tableofcontents{%
+	\if@twocolumn
+		\@restonecoltrue\onecolumn
+	\else
+		\@restonecolfalse
+	\fi
+	\chapter*{\contentsname
+			\@mkboth{%
+				 \textit{\contentsname}}{\textit{\contentsname}}}%
+	\@starttoc{toc}%
+	\if@restonecol\twocolumn\fi}
+\makeatother
+$endif$
+
+\begin{document}
+\title{$title$}
+\author{$author$}
+
+$if(chapter)$
+\setcounter{chapter}{$chapter$}
+\addtocounter{chapter}{-1}
+$endif$
+
+$body$
+
+\end{document}

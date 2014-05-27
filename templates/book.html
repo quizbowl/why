@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>$pagetitle$</title>
+  <link rel="stylesheet" href="templates/book.css" />
+</head>
+<body>
+$if(title)$
+<header>
+<h1 class="title">$title$</h1>
+$for(author)$
+<h2 class="author">$author$</h2>
+$endfor$
+$if(date)$
+<h3 class="date">$date$</h3>
+$endif$
+</header>
+
+$endif$
+<div id="TOC">
+<h1>Contents</h1>
+$toc$
+</div>
+
+$body$
+</body>
+</html>
